@@ -14,9 +14,8 @@ jobs:
         run: env
       - name: test 
         shell: bash
-        working-directory: .
         run: |
-          for i in $(ls ./templates/) ; do 
+          for i in $(ls $PWD/templates) ; do 
             echo $i ; 
             docker run -v $(pwd)/templates:/tmp/templates altemista/dev-portal:latest /usr/src/app/server/scripts/parser /tmp/templates/$i ; 
           done 
