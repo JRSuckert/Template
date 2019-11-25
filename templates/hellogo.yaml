@@ -10,7 +10,7 @@ prerequisites:
     description: Golang binary must be installed
     link: http://golang.org
 
-version: 0.0.1
+#version: 0.0.1
 license: MIT
 
 description: Template to generate a sample hello world program in golang.
