@@ -10,8 +10,16 @@ jobs:
   validate-templates:
     runs-on: ubuntu-latest
     steps:
+      - name: env test 
+        run: env
       - name: test 
-        run: for i in templates/* ; do echo $i ; docker run -v $(pwd)/templates:/tmp/templates altemista/dev-portal:latest /usr/src/app/server/scripts/parser /tmp/$i ; done 
+        shell: bash
+        working-directory: .
+        run: |
+          for i in templates/* ; do 
+            echo $i ; 
+            docker run -v $(pwd)/templates:/tmp/templates altemista/dev-portal:latest /usr/src/app/server/scripts/parser /tmp/$i ; 
+          done 
 
   update-portal:
     runs-on: ubuntu-latest
