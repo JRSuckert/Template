@@ -16,7 +16,7 @@ jobs:
         run: |
           pwd;
           ls -l;
-          ls -l templates;
+          ls -l ../;
       - name: test 
         shell: bash
         run: |
