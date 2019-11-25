@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test 
-        run: for i in templates/* ; do docker run -v $(pwd)/templates:/tmp/templates altemista/dev-portal:latest /usr/src/app/server/scripts/parser /tmp/$i ; done 
+        run: for i in templates/* ; do echo $i ; docker run -v $(pwd)/templates:/tmp/templates altemista/dev-portal:latest /usr/src/app/server/scripts/parser /tmp/$i ; done 
 
   update-portal:
     runs-on: ubuntu-latest
