@@ -12,6 +12,11 @@ jobs:
     steps:
       - name: env test 
         run: env
+      - name: meh 
+        run: |
+          pwd;
+          ls -l;
+          ls -l templates;
       - name: test 
         shell: bash
         run: |
